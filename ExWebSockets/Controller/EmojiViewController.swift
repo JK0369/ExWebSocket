@@ -1,5 +1,5 @@
 //
-//  NameViewController.swift
+//  EmojiViewController.swift
 //  ExWebSockets
 //
 //  Created by Jake.K on 2022/01/07.
@@ -20,7 +20,7 @@ final class EmojiViewController: UIViewController {
     static let white = UIColor.white
     static let clear = UIColor.clear
   }
-  
+
   // MARK: UI
   private let informationLabel: UILabel = {
     let label = UILabel()
@@ -62,10 +62,17 @@ final class EmojiViewController: UIViewController {
     }
   }
   private let userName: String
+  private var socket: WebSocket?
   
   init() {
     self.userName = UserDefaults.standard.string(forKey: "name") ?? ""
     super.init(nibName: nil, bundle: nil)
+  }
+  
+  // 5
+  deinit {
+    socket?.disconnect()
+    socket?.delegate = nil
   }
   
   @available(*, unavailable)
@@ -104,6 +111,9 @@ final class EmojiViewController: UIViewController {
     
     self.collectionView.dataSource = self
     self.collectionView.delegate = self
+    
+    // 2 connect to web socket server
+    self.setupWebSocket()
   }
   
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -111,8 +121,30 @@ final class EmojiViewController: UIViewController {
     self.view.endEditing(true)
   }
   
+  private func setupWebSocket() {
+    let url = URL(string: "ws://localhost:1337/")!
+    var request = URLRequest(url: url)
+    request.timeoutInterval = 5
+    socket = WebSocket(request: request)
+    socket?.delegate = self
+    socket?.connect()
+  }
+  
   @objc private func didTapButton() {
-    
+    // 3-2
+    self.sendMessage(self.informationLabelText)
+  }
+  
+  // 3-1
+  private func sendMessage(_ message: String) {
+    self.title = "메세지 전송"
+    socket?.write(string: message)
+  }
+  
+  // 4-1
+  private func receivedMessage(_ message: String, senderName: String) {
+    self.title = "메세지 from (\(senderName))"
+    self.informationLabelText = message
   }
 }
 
@@ -128,6 +160,48 @@ extension EmojiViewController: UICollectionViewDelegate, UICollectionViewDataSou
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    self.informationLabelText = emojis[indexPath.item]
+    let message = emojis[indexPath.item]
+    self.informationLabelText = message
+  }
+}
+
+extension EmojiViewController: WebSocketDelegate {
+  func didReceive(event: WebSocketEvent, client: WebSocket) {
+    switch event {
+    case .connected(let headers):
+      client.write(string: userName)
+      print("websocket is connected: \(headers)")
+    case .disconnected(let reason, let code):
+      print("websocket is disconnected: \(reason) with code: \(code)")
+    case .text(let text):
+      // 4-2
+      guard let data = text.data(using: .utf16),
+        let jsonData = try? JSONSerialization.jsonObject(with: data, options: []),
+        let jsonDict = jsonData as? NSDictionary,
+        let messageType = jsonDict["type"] as? String else {
+          return
+      }
+      
+      if messageType == "message",
+        let messageData = jsonDict["data"] as? NSDictionary,
+        let messageAuthor = messageData["author"] as? String,
+        let messageText = messageData["text"] as? String {
+        self.receivedMessage(messageText, senderName: messageAuthor)
+      }
+    case .binary(let data):
+      print("Received data: \(data.count)")
+    case .ping(_):
+      break
+    case .pong(_):
+      break
+    case .viabilityChanged(_):
+      break
+    case .reconnectSuggested(_):
+      break
+    case .cancelled:
+      print("websocket is canclled")
+    case .error(let error):
+      print("websocket is error = \(error!)")
+    }
   }
 }

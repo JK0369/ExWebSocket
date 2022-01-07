@@ -53,6 +53,7 @@ class NameViewController: UIViewController {
   
   @objc
   private func didTapConfirmButton() {
+    UserDefaults.standard.set(self.nameTextField.text, forKey: "name")
     let emojiViewController = EmojiViewController()
     self.navigationController?.pushViewController(emojiViewController, animated: true)
   }

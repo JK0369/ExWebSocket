@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61AE9B3C2748BD6F48948F1 /* Pods_ExWebSockets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AECFB6831DB6902A31E503 /* Pods_ExWebSockets.framework */; };
 		C614BB642788628700963C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614BB632788628700963C15 /* AppDelegate.swift */; };
 		C614BB662788628700963C15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614BB652788628700963C15 /* SceneDelegate.swift */; };
-		C614BB682788628700963C15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614BB672788628700963C15 /* ViewController.swift */; };
-		C614BB6B2788628700963C15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C614BB692788628700963C15 /* Main.storyboard */; };
 		C614BB6D2788628900963C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C614BB6C2788628900963C15 /* Assets.xcassets */; };
 		C614BB702788628900963C15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C614BB6E2788628900963C15 /* LaunchScreen.storyboard */; };
+		C614BB7C2788716A00963C15 /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614BB7B2788716A00963C15 /* EmojiViewController.swift */; };
+		C614BB81278872B200963C15 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614BB80278872B200963C15 /* EmojiCollectionViewCell.swift */; };
+		C614BB8427887BB200963C15 /* AttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614BB8327887BB200963C15 /* AttributedString+Extension.swift */; };
+		C614BB8627887E2E00963C15 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614BB8527887E2E00963C15 /* NameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		372555FCD39AAD2E37448047 /* Pods-ExWebSockets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExWebSockets.debug.xcconfig"; path = "Target Support Files/Pods-ExWebSockets/Pods-ExWebSockets.debug.xcconfig"; sourceTree = "<group>"; };
+		A0AECFB6831DB6902A31E503 /* Pods_ExWebSockets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExWebSockets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C614BB602788628700963C15 /* ExWebSockets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExWebSockets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C614BB632788628700963C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C614BB652788628700963C15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C614BB672788628700963C15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C614BB6A2788628700963C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C614BB6C2788628900963C15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C614BB6F2788628900963C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C614BB712788628900963C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C614BB7B2788716A00963C15 /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
+		C614BB80278872B200963C15 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
+		C614BB8327887BB200963C15 /* AttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+Extension.swift"; sourceTree = "<group>"; };
+		C614BB8527887E2E00963C15 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		D954671559C2A8238DA7F7EB /* Pods-ExWebSockets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExWebSockets.release.xcconfig"; path = "Target Support Files/Pods-ExWebSockets/Pods-ExWebSockets.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61AE9B3C2748BD6F48948F1 /* Pods_ExWebSockets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C3C642C8D3E59D738467644 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0AECFB6831DB6902A31E503 /* Pods_ExWebSockets.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EB6BAD854F230CA55FDD50B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				372555FCD39AAD2E37448047 /* Pods-ExWebSockets.debug.xcconfig */,
+				D954671559C2A8238DA7F7EB /* Pods-ExWebSockets.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C614BB572788628700963C15 = {
 			isa = PBXGroup;
 			children = (
 				C614BB622788628700963C15 /* ExWebSockets */,
 				C614BB612788628700963C15 /* Products */,
+				9EB6BAD854F230CA55FDD50B /* Pods */,
+				7C3C642C8D3E59D738467644 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +84,49 @@
 		C614BB622788628700963C15 /* ExWebSockets */ = {
 			isa = PBXGroup;
 			children = (
+				C614BB8227887BAC00963C15 /* Util */,
+				C614BB7F2788729F00963C15 /* Model */,
+				C614BB7E2788729C00963C15 /* View */,
+				C614BB7D2788729800963C15 /* Controller */,
 				C614BB632788628700963C15 /* AppDelegate.swift */,
 				C614BB652788628700963C15 /* SceneDelegate.swift */,
-				C614BB672788628700963C15 /* ViewController.swift */,
-				C614BB692788628700963C15 /* Main.storyboard */,
 				C614BB6C2788628900963C15 /* Assets.xcassets */,
 				C614BB6E2788628900963C15 /* LaunchScreen.storyboard */,
 				C614BB712788628900963C15 /* Info.plist */,
 			);
 			path = ExWebSockets;
+			sourceTree = "<group>";
+		};
+		C614BB7D2788729800963C15 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C614BB8527887E2E00963C15 /* NameViewController.swift */,
+				C614BB7B2788716A00963C15 /* EmojiViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C614BB7E2788729C00963C15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C614BB80278872B200963C15 /* EmojiCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C614BB7F2788729F00963C15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C614BB8227887BAC00963C15 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C614BB8327887BB200963C15 /* AttributedString+Extension.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C614BB742788628900963C15 /* Build configuration list for PBXNativeTarget "ExWebSockets" */;
 			buildPhases = (
+				2B0D66126B2304B4AFC658CF /* [CP] Check Pods Manifest.lock */,
 				C614BB5C2788628700963C15 /* Sources */,
 				C614BB5D2788628700963C15 /* Frameworks */,
 				C614BB5E2788628700963C15 /* Resources */,
+				68B535C7A1F4E5EA0D747876 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +191,70 @@
 			files = (
 				C614BB702788628900963C15 /* LaunchScreen.storyboard in Resources */,
 				C614BB6D2788628900963C15 /* Assets.xcassets in Resources */,
-				C614BB6B2788628700963C15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B0D66126B2304B4AFC658CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExWebSockets-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68B535C7A1F4E5EA0D747876 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExWebSockets/Pods-ExWebSockets-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExWebSockets/Pods-ExWebSockets-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExWebSockets/Pods-ExWebSockets-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C614BB5C2788628700963C15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C614BB682788628700963C15 /* ViewController.swift in Sources */,
 				C614BB642788628700963C15 /* AppDelegate.swift in Sources */,
 				C614BB662788628700963C15 /* SceneDelegate.swift in Sources */,
+				C614BB7C2788716A00963C15 /* EmojiViewController.swift in Sources */,
+				C614BB8427887BB200963C15 /* AttributedString+Extension.swift in Sources */,
+				C614BB81278872B200963C15 /* EmojiCollectionViewCell.swift in Sources */,
+				C614BB8627887E2E00963C15 /* NameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C614BB692788628700963C15 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C614BB6A2788628700963C15 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C614BB6E2788628900963C15 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -217,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,6 +384,7 @@
 		};
 		C614BB752788628900963C15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 372555FCD39AAD2E37448047 /* Pods-ExWebSockets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,9 +395,9 @@
 				INFOPLIST_FILE = ExWebSockets/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +413,7 @@
 		};
 		C614BB762788628900963C15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D954671559C2A8238DA7F7EB /* Pods-ExWebSockets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,9 +424,9 @@
 				INFOPLIST_FILE = ExWebSockets/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,6 @@
+framework module Pods_ExWebSockets {
+  umbrella header "Pods-ExWebSockets-umbrella.h"
+
+  export *
+  module * { export * }
+}
